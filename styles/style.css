@@ -40,12 +40,15 @@ figure {
   margin: 0;
 }
 
+.content-section {
+  padding: 0 5vw;
+}
+
 .heading {
   font-family: var(--accent-font);
   font-weight: 600;
   line-height: 90%;
   text-align: center;
-  color: var(--text-color);
 }
 
 .header {
@@ -58,10 +61,10 @@ figure {
 }
 
 .header__menu {
-  padding: 20px 5vw !important;
+  padding: 20px 5vw;
   display: flex;
-  border-top: 1px solid #312a4e;
-  border-bottom: 1px solid #312a4e;
+  border-top: 1px solid var(--text-color);
+  border-bottom: 1px solid var(--text-color);
   justify-content: space-between;
 }
 
@@ -71,6 +74,7 @@ figure {
 }
 
 .header__theme-button {
+  padding: 0;
   font-family: inherit;
   cursor: pointer;
   border: none;
@@ -95,16 +99,14 @@ figure {
 .header__theme-button_is-active::after {
   content: "";
   position: absolute;
-  right: 0px;
-  bottom: 0;
-  width: 100%;
-  height: 0.6em;
+  right: -3px;
+  bottom: 6px;
+  width: 106%;
+  height: 0.4em;
   background: var(--accent-color);
   z-index: -1;
 }
-.content-section {
-  padding: 0 5vw;
-}
+
 .content__title {
   font-size: 30px;
   margin: 7% 0 2.5%;
@@ -132,11 +134,6 @@ figure {
 }
 
 .theme_dark .content__text-block_type_first-lettered::first-letter {
-  display: inline-block;
-  font-weight: bold;
-  font-size: 30px;
-  padding: 0 4px;
-  margin-right: 1px;
   border: 1px solid var(--text-color);
 }
 
@@ -204,6 +201,9 @@ figure {
 .content__list {
   font-size: 18px;
   list-style: none;
+}
+
+.content__list li {
   position: relative;
 }
 
@@ -214,7 +214,8 @@ figure {
 .content__list li::before {
   content: "";
   position: absolute;
-  left: 10px;
+  top: 4px;
+  left: -25px;
   width: 15px;
   height: 15px;
   background-position: center;
@@ -223,13 +224,6 @@ figure {
 }
 
 .theme_dark .content__list li::before {
-  content: "";
-  position: absolute;
-  left: 10px;
-  width: 15px;
-  height: 15px;
-  background-position: center;
-  background-repeat: no-repeat;
   background-image: url("../images/marker-dark.svg");
 }
 
@@ -243,9 +237,13 @@ figure {
   align-items: center;
 }
 
+.footer__copyright {
+  text-transform: uppercase;
+}
+
 button:focus,
 button:focus-visible,
 a:focus,
 a:focus-visible {
-  outline: 1px solid #312a4e;
+  outline: 1px solid var(--text-color);
 }
