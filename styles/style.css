@@ -227,9 +227,9 @@ figure {
   left: 10px;
   width: 15px;
   height: 15px;
-  background: transparent;
-  border: 1px solid var(--text-color);
-  transform: rotate(45deg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../images/marker-dark.svg");
 }
 
 .footer {
